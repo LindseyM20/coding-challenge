@@ -1,0 +1,17 @@
+* {
+  background-color: hotpink;
+  text-align: center;
+}
+
+h1, h4 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#start {
+  cursor: pointer;
+  background-color: lawngreen;
+}
+
+.answerBtn {
+  cursor: pointer;
+}

@@ -29,10 +29,6 @@
     };
 
     highScores.push(data);
-    // highScores.sort(function compare(a, b) {
-    //   return b.numb - a.numb;
-    // });
-
     localStorage.setItem("key_highScores", JSON.stringify(highScores));
     var scoreEl = document.querySelector("#highScores");
     for (var i = 0; i < highScores.length; i++) {

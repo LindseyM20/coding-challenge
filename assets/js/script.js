@@ -5,8 +5,6 @@ var timeEl = document.createElement("p");
 var answerList = document.createElement("ul");
 var saveScore = document.createElement("a");
 var highScore = document.createElement("h4");
-// var scoreDisplay = document.getElementById("score");
-
 var secondsLeft = 100;
 var questionIndex = 0
 var score = 0;
@@ -66,7 +64,6 @@ function timer() {
     }
     console.log(secondsLeft);
   }, 1000);
-
 };
 
 // The questioning!!!
@@ -75,8 +72,6 @@ function getQuestion() {
   answerList.textContent = "";
   var currentQuestion = questions[questionIndex];
   quizEl.textContent = currentQuestion.Ask;
-  // scoreDisplay.textContent = score;
-
 
   for (var i = 0; i < currentQuestion.Options.length; i++) {
     var optionBtn = document.createElement("li");
@@ -91,17 +86,15 @@ function checkAnswer() {
   if(this.innerHTML == questions[questionIndex].Correct) {
     score++;
     console.log("Score is " + score);
-    console.log("questionIndex is " + questionIndex);
-    console.log("correct!");
-    //inform user answer is correct
+    alert("correct!");
   }
   else {
     secondsLeft -= 10;
-    console.log("questionIndex is " + questionIndex);
-    console.log("incorrect!");
-    //inform user answer is wrong
+    alert("incorrect!");
   }
+
   questionIndex ++;
+
   if(questionIndex === questions.length) {
       gameOver();
   }

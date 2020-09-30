@@ -1,17 +1,40 @@
 * {
   background-color: hotpink;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 h1, h4 {
   font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 #start {
   cursor: pointer;
+  font-size: 22px;
   background-color: lawngreen;
 }
 
-.answerBtn {
+p {
+  padding: 10px;
+}
+
+#quizEl-div {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px
+}
+
+ul {
+  list-style: none;
+
+}
+
+li {
+  text-align: left;
+  font-weight: 500;
+  margin: 5px;
+  padding-left: 10px;
   cursor: pointer;
+  background-color: rgb(244, 200, 255);
 }

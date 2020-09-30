@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <title>Coding Challenge!</title>
 </head>
+
 <body>
-  <div></div>
+  <div>
+    <h1>High Scores</h1>
+    <ul id="highScores"></ul>
+  </div>
+  <script>
+    var highScores = localStorage.getItem("key_highScores");
+    if (!highScores) {
+      highScores = [];
+    } else {
+      highScores = JSON.parse(highScores);
+    }
+
+    var name = prompt("Please enter your initials.");
+    var numb = prompt("Please enter your score.");
+    var data = {
+      name: name,
+      numb: numb,
+    };
+
+    highScores.push(data);
+    // highScores.sort(function compare(a, b) {
+    //   return b.numb - a.numb;
+    // });
+
+    localStorage.setItem("key_highScores", JSON.stringify(highScores));
+    var scoreEl = document.querySelector("#highScores");
+    for (var i = 0; i < highScores.length; i++) {
+      var data = highScores[i];
+      var scoreLi = document.createElement("li");
+      scoreLi.textContent = data.name + ": " + data.numb;
+      scoreEl.appendChild(scoreLi);
+    }
+  </script>
 </body>
+
 </html>

@@ -120,6 +120,7 @@ function gameOver() {
   highScore.setAttribute("href", "./saveScore.html");
   mainDiv.appendChild(highScore);
   mainDiv.appendChild(saveScore);
-  highScore.textContent = "Your score is " + score + "!"
-  saveScore.textContent = "Save your score"
+  var totalScore = score = secondsLeft;
+  highScore.textContent = "Your score is " + totalScore + "!";
+  saveScore.textContent = "Save your score";
 }
